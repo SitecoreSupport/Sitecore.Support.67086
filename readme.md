@@ -1,5 +1,5 @@
 # Sitecore.Support.67086
-Send Mail Message action fails in CM\CD if uses any list field as token
+Send Mail Message action fails in CM/CD if uses any list field as token
 
 ## License  
 This patch is licensed under the [Sitecore Corporation A/S License for GitHub](https://github.com/sitecoresupport/Sitecore.Support.67086/blob/master/LICENSE).  
