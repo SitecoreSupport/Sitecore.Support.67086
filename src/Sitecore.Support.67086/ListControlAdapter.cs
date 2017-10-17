@@ -3,7 +3,6 @@ using Sitecore.Form.Core.Configuration;
 using Sitecore.Form.Core.Utility;
 using Sitecore.Forms.Core.Data;
 using Sitecore.Globalization;
-using Sitecore.WFFM.Abstractions.Data;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -14,7 +13,7 @@ namespace Sitecore.Support.Form.UI.Adapters
 {
     public class ListControlAdapter : Adapter
     {
-        public override IEnumerable<string> AdaptToFriendlyListValues(IFieldItem field, string value, bool returnTexts)
+        public override IEnumerable<string> AdaptToFriendlyListValues(FieldItem field, string value, bool returnTexts)
         {
             IEnumerable<string> enumerable = ParametersUtil.XmlToStringArray(value);
             if (field != null & returnTexts)
@@ -60,7 +59,7 @@ namespace Sitecore.Support.Form.UI.Adapters
             return enumerable;
         }
 
-        public override string AdaptToFriendlyValue(IFieldItem field, string value)
+        public override string AdaptToFriendlyValue(FieldItem field, string value)
         {
             return string.Join(", ", new List<string>(this.AdaptToFriendlyListValues(field, value, true)).ToArray());
         }
